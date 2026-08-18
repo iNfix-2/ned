@@ -3,12 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products & Services | NetHawk Solutions</title>
-    <meta name="description" content="Explore NetHawk Solutions services in UAV aerial surveillance, executive protection, asset security, and NATI drone pilot certification.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Products & Solutions | NetHawk Solutions</title>
+    <meta name="description" content="Explore NetHawk Solutions products including NH-100, NH-110, NH-200, NH-310 GNSS/INS systems, UAV surveillance, and integrated risk management.">
     
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -19,15 +15,17 @@
         <div class="container top-bar-container">
             <a href="contact.html">CONTACT US</a>
             <span>|</span>
-            <a href="index.html#solutions">AVIATION PRIMER</a>
+            <a href="services.html">AVIATION PRIMER</a>
             <span>|</span>
-            <a href="about.html#nati">NATI PORTAL</a>
+            <a href="about.html#nati">NATI ACADEMY PORTAL</a>
+            <span>|</span>
+            <a href="index.html#gcs"><span class="top-bar-badge">SDK 3.2</span> TELEMETRY CENTER</a>
             <span>|</span>
             <a href="tel:+2349067879766">📞 +234(0) 906 7879 766</a>
         </div>
     </div>
 
-    <!-- Header Navigation -->
+    <!-- Header Navigation with Mega Dropdown -->
     <header class="site-header" id="navbar">
         <div class="container header-container">
             <a href="index.html" class="brand-logo" aria-label="NetHawk Solutions Home">
@@ -36,13 +34,38 @@
 
             <div class="nav-links-wrap">
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html" class="active">Products & Solutions</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="index.html#resources">Resources</a></li>
-                    <li><a href="index.html#news">Newsroom</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link active">Products <span class="nav-arrow">▼</span></a>
+                        <div class="mega-menu">
+                            <div>
+                                <div class="menu-group-title">Sensors & Inertial</div>
+                                <a href="#nh100" class="menu-item-link">
+                                    <span class="menu-item-name">NH-100 Series</span>
+                                    <span class="menu-item-desc">Industrial Thermal & IMU Payload</span>
+                                </a>
+                                <a href="#nh110" class="menu-item-link">
+                                    <span class="menu-item-name">NH-110 Tactical</span>
+                                    <span class="menu-item-desc">High-G Tactical AHRS System</span>
+                                </a>
+                            </div>
+                            <div>
+                                <div class="menu-group-title">GNSS / INS Systems</div>
+                                <a href="#nh200" class="menu-item-link">
+                                    <span class="menu-item-name">NH-200 GNSS/INS</span>
+                                    <span class="menu-item-desc">BVLOS Autonomous Navigation</span>
+                                </a>
+                                <a href="#nh310" class="menu-item-link">
+                                    <span class="menu-item-name">NH-310 Dual GNSS</span>
+                                    <span class="menu-item-desc">Dual-Antenna Anti-Jamming UAV</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="index.html#industries" class="nav-link">Industries</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About & NATI</a></li>
                 </ul>
-                <a href="contact.html" class="btn-nav-cta">Contact Us</a>
+                <a href="contact.html" class="btn-vn-nav">Contact Us &rarr;</a>
             </div>
 
             <button class="burger-menu-btn" id="burgerBtn" aria-label="Open Navigation Menu">
@@ -51,8 +74,19 @@
         </div>
     </header>
 
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <button class="mobile-nav-close" id="mobileClose" aria-label="Close Menu">&times;</button>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html" class="active">Products & Solutions</a></li>
+            <li><a href="about.html">About & NATI Academy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
     <!-- Hero Banner -->
-    <section class="hero-section" style="min-height: 55vh;">
+    <section class="hero-section" style="min-height: 52vh;">
         <video class="hero-video" autoplay loop muted playsinline poster="assets/images/hero_surveillance_drone_1786471673372.png">
             <source src="assets/videos/hero_background.mp4" type="video/mp4">
         </video>
@@ -60,33 +94,126 @@
         <div class="hero-wireframe-grid"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-pretitle">SYSTEMS & CAPABILITIES</div>
+                <div class="hero-pretitle">SYSTEMS & TACTICAL CAPABILITIES</div>
                 <h1 class="hero-title">PRODUCTS & <span>SOLUTIONS</span></h1>
-                <p class="hero-text">End-to-end tactical aviation, intelligent reconnaissance, and security services for complex missions.</p>
+                <p class="hero-text">End-to-end tactical aviation, GNSS/INS hardware, intelligent drone surveillance, and risk management.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Finder Section -->
-    <section class="solutions-finder-section" style="padding: 90px 0;">
+    <!-- Detailed Products Grid -->
+    <section class="product-matrix-section">
         <div class="container">
-            <div class="solutions-finder-grid" style="grid-template-columns: 1fr; gap: 30px;">
+            <div class="matrix-heading-center">
+                <div class="section-pretitle">DEFENSE & COMMERCIAL HARDWARE</div>
+                <h2 class="section-title-heading light">PRECISION PRODUCT LINE-UP</h2>
+            </div>
+
+            <div class="product-cards-grid" style="grid-template-columns: repeat(2, 1fr); gap: 30px;">
                 
-                <!-- Service 1 -->
-                <div class="solution-finder-card" id="uav" style="flex-direction: column; align-items: flex-start; gap: 20px;">
+                <!-- NH-100 -->
+                <div class="product-card" id="nh100">
+                    <div>
+                        <div class="product-series-tag">
+                            <span>SERIES NH-100</span>
+                            <span class="product-badge">IMU / SENSOR</span>
+                        </div>
+                        <h3 class="product-name">NH-100 Industrial IMU Payload</h3>
+                        <p class="product-subtitle" style="margin-bottom: 16px;">Tactical thermal sensor suite and MEMS inertial measurement unit engineered for high-vibration drone platforms.</p>
+                        <ul class="product-spec-list">
+                            <li class="product-spec-item">Gyroscope Bias In-Run Stability: 1.0°/hr</li>
+                            <li class="product-spec-item">Accelerometer Range: ±16g</li>
+                            <li class="product-spec-item">Dual RS-422 & High-Speed UART Interface</li>
+                            <li class="product-spec-item">Operating Temp: -40°C to +85°C</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="btn-vn-solid" style="margin-top: 20px;">Request Datasheet & Quote &rarr;</a>
+                </div>
+
+                <!-- NH-110 -->
+                <div class="product-card" id="nh110">
+                    <div>
+                        <div class="product-series-tag">
+                            <span>SERIES NH-110</span>
+                            <span class="product-badge">TACTICAL AHRS</span>
+                        </div>
+                        <h3 class="product-name">NH-110 Tactical AHRS</h3>
+                        <p class="product-subtitle" style="margin-bottom: 16px;">Attitude & Heading Reference System providing uncompromised 3D orientation for defense and high-G aviation.</p>
+                        <ul class="product-spec-list">
+                            <li class="product-spec-item">Heading Accuracy: 0.3° RMS (Dynamic)</li>
+                            <li class="product-spec-item">Pitch / Roll Accuracy: 0.1° RMS</li>
+                            <li class="product-spec-item">High-G Rating: MIL-STD-810H Certified</li>
+                            <li class="product-spec-item">Ultra-Low Power Consumption (< 1.2W)</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="btn-vn-solid" style="margin-top: 20px;">Request Datasheet & Quote &rarr;</a>
+                </div>
+
+                <!-- NH-200 -->
+                <div class="product-card" id="nh200">
+                    <div>
+                        <div class="product-series-tag">
+                            <span>SERIES NH-200</span>
+                            <span class="product-badge">GNSS / INS</span>
+                        </div>
+                        <h3 class="product-name">NH-200 BVLOS GNSS/INS</h3>
+                        <p class="product-subtitle" style="margin-bottom: 16px;">Integrated GNSS/INS navigation solution delivering centimeter-level precision for beyond visual line-of-sight operations.</p>
+                        <ul class="product-spec-list">
+                            <li class="product-spec-item">Position Accuracy: 1.0 m RMS (RTK 0.01m)</li>
+                            <li class="product-spec-item">APNT Anti-Spoofing Signals</li>
+                            <li class="product-spec-item">Onboard 100 Hz Data Logger</li>
+                            <li class="product-spec-item">CAN Bus & Ethernet Network Integration</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="btn-vn-solid" style="margin-top: 20px;">Request Datasheet & Quote &rarr;</a>
+                </div>
+
+                <!-- NH-310 -->
+                <div class="product-card" id="nh310">
+                    <div>
+                        <div class="product-series-tag">
+                            <span>SERIES NH-310</span>
+                            <span class="product-badge">DUAL GNSS</span>
+                        </div>
+                        <h3 class="product-name">NH-310 Dual-Antenna System</h3>
+                        <p class="product-subtitle" style="margin-bottom: 16px;">Dual-antenna GNSS/INS providing precise heading even under low dynamic conditions and GPS-challenged defense environments.</p>
+                        <ul class="product-spec-list">
+                            <li class="product-spec-item">Dual Antenna Heading Accuracy: 0.05°</li>
+                            <li class="product-spec-item">Zero-Velocity Inertial Drift Compensation</li>
+                            <li class="product-spec-item">Swarm Drone Telemetry Protocol</li>
+                            <li class="product-spec-item">Anodized Ruggedized Enclosure</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="btn-vn-solid" style="margin-top: 20px;">Request Datasheet & Quote &rarr;</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="solutions-finder-section" id="uav" style="padding: 90px 0;">
+        <div class="container">
+            <div class="section-heading-center">
+                <div class="section-pretitle" style="color: var(--vn-blue);">INTEGRATED SERVICES</div>
+                <h2 class="section-title-heading dark">MISSION & SURVEILLANCE SERVICES</h2>
+            </div>
+
+            <div class="solutions-finder-grid" style="grid-template-columns: 1fr; gap: 24px;">
+                
+                <div class="solution-finder-card" style="flex-direction: column; align-items: flex-start; gap: 20px;">
                     <div class="solution-card-left">
                         <div class="solution-card-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                         </div>
                         <div class="solution-card-info">
-                            <h3>UAV & AERIAL SURVEILLANCE SYSTEMS</h3>
+                            <h3>UAV & AERIAL SURVEILLANCE OPERATIONS</h3>
                             <p>Long-range BVLOS operations, thermal payload sensors, automated perimeter security sweeps, and live encrypted HD video telemetry feeds to remote command centers.</p>
                         </div>
                     </div>
-                    <a href="contact.html" class="btn-vn-solid" style="padding: 12px 28px; font-size: 0.9rem;">Inquire System Specs &rarr;</a>
+                    <a href="contact.html" class="btn-vn-solid" style="padding: 12px 28px; font-size: 0.85rem;">Inquire System Specs &rarr;</a>
                 </div>
 
-                <!-- Service 2 -->
                 <div class="solution-finder-card" id="security" style="flex-direction: column; align-items: flex-start; gap: 20px;">
                     <div class="solution-card-left">
                         <div class="solution-card-icon">
@@ -97,21 +224,7 @@
                             <p>Comprehensive vulnerability assessments, VIP protection, armed tactical escorts, and critical infrastructure risk mitigation strategies for energy and corporate sectors.</p>
                         </div>
                     </div>
-                    <a href="contact.html" class="btn-vn-solid" style="padding: 12px 28px; font-size: 0.9rem;">Inquire Security Solutions &rarr;</a>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="solution-finder-card" id="aviation" style="flex-direction: column; align-items: flex-start; gap: 20px;">
-                    <div class="solution-card-left">
-                        <div class="solution-card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                        </div>
-                        <div class="solution-card-info">
-                            <h3>AVIATION LOGISTICS & FLEET OPERATIONS</h3>
-                            <p>Specialized logistics for remote locations, emergency payload delivery, drone fleet maintenance, and full-spectrum flight operations management.</p>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="btn-vn-solid" style="padding: 12px 28px; font-size: 0.9rem;">Inquire Aviation Logistics &rarr;</a>
+                    <a href="contact.html" class="btn-vn-solid" style="padding: 12px 28px; font-size: 0.85rem;">Inquire Security Solutions &rarr;</a>
                 </div>
 
             </div>
@@ -123,7 +236,7 @@
         <div class="container">
             <div class="footer-bottom-legal">
                 <span>Copyright &copy; 2026 NetHawk Solutions LLC. All rights reserved.</span>
-                <span>NCAA & BVLOS Regulatory Certified</span>
+                <span>NCAA & BVLOS Regulatory Certified | ISO 9001:2015</span>
             </div>
         </div>
         <div class="footer-red-bar">
@@ -131,12 +244,14 @@
                 <div class="footer-red-links">
                     <a href="index.html">HOME</a>
                     <a href="services.html">PRODUCTS & SOLUTIONS</a>
-                    <a href="contact.html">CONTACT US</a>
+                    <a href="about.html">ABOUT US</a>
+                    <a href="contact.html">CONTACT SUPPORT</a>
                 </div>
                 <div>NETHAWK DEFENSE & AVIATION</div>
             </div>
         </div>
     </footer>
 
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

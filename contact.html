@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | NetHawk Solutions</title>
-    <meta name="description" content="Get in touch with NetHawk Solutions for GNSS/INS datasheets, UAV surveillance inquiries, and NATI pilot academy registration.">
+    <meta name="description" content="Get in touch with NetHawk Solutions for security inquiries, drone flight operations, and training programs.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -15,17 +19,15 @@
         <div class="container top-bar-container">
             <a href="contact.html">CONTACT US</a>
             <span>|</span>
-            <a href="services.html">AVIATION PRIMER</a>
+            <a href="index.html#solutions">AVIATION PRIMER</a>
             <span>|</span>
-            <a href="about.html#nati">NATI ACADEMY PORTAL</a>
-            <span>|</span>
-            <a href="index.html#gcs"><span class="top-bar-badge">SDK 3.2</span> TELEMETRY CENTER</a>
+            <a href="about.html#nati">NATI PORTAL</a>
             <span>|</span>
             <a href="tel:+2349067879766">📞 +234(0) 906 7879 766</a>
         </div>
     </div>
 
-    <!-- Header Navigation with Mega Dropdown -->
+    <!-- Header Navigation -->
     <header class="site-header" id="navbar">
         <div class="container header-container">
             <a href="index.html" class="brand-logo" aria-label="NetHawk Solutions Home">
@@ -34,38 +36,13 @@
 
             <div class="nav-links-wrap">
                 <ul class="nav-links">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item">
-                        <a href="services.html" class="nav-link">Products <span class="nav-arrow">▼</span></a>
-                        <div class="mega-menu">
-                            <div>
-                                <div class="menu-group-title">Sensors & Inertial</div>
-                                <a href="services.html#nh100" class="menu-item-link">
-                                    <span class="menu-item-name">NH-100 Series</span>
-                                    <span class="menu-item-desc">Industrial Thermal & IMU Payload</span>
-                                </a>
-                                <a href="services.html#nh110" class="menu-item-link">
-                                    <span class="menu-item-name">NH-110 Tactical</span>
-                                    <span class="menu-item-desc">High-G Tactical AHRS System</span>
-                                </a>
-                            </div>
-                            <div>
-                                <div class="menu-group-title">GNSS / INS Systems</div>
-                                <a href="services.html#nh200" class="menu-item-link">
-                                    <span class="menu-item-name">NH-200 GNSS/INS</span>
-                                    <span class="menu-item-desc">BVLOS Autonomous Navigation</span>
-                                </a>
-                                <a href="services.html#nh310" class="menu-item-link">
-                                    <span class="menu-item-name">NH-310 Dual GNSS</span>
-                                    <span class="menu-item-desc">Dual-Antenna Anti-Jamming UAV</span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a href="index.html#industries" class="nav-link">Industries</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About & NATI</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Products & Solutions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#resources">Resources</a></li>
+                    <li><a href="index.html#news">Newsroom</a></li>
                 </ul>
-                <a href="contact.html" class="btn-vn-solid" style="padding: 10px 22px;">Contact Us &rarr;</a>
+                <a href="contact.html" class="btn-nav-cta" style="background-color: var(--vn-red);">Contact Us</a>
             </div>
 
             <button class="burger-menu-btn" id="burgerBtn" aria-label="Open Navigation Menu">
@@ -74,19 +51,8 @@
         </div>
     </header>
 
-    <!-- Mobile Drawer -->
-    <div class="mobile-nav-drawer" id="mobileDrawer">
-        <button class="mobile-nav-close" id="mobileClose" aria-label="Close Menu">&times;</button>
-        <ul class="mobile-nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Products & Solutions</a></li>
-            <li><a href="about.html">About & NATI Academy</a></li>
-            <li><a href="contact.html" class="active">Contact Us</a></li>
-        </ul>
-    </div>
-
     <!-- Banner -->
-    <section class="hero-section" style="min-height: 48vh;">
+    <section class="hero-section" style="min-height: 50vh;">
         <video class="hero-video" autoplay loop muted playsinline poster="assets/images/about_drone_mission_1786471689876.png">
             <source src="assets/videos/hero_background.mp4" type="video/mp4">
         </video>
@@ -96,16 +62,16 @@
             <div class="hero-content">
                 <div class="hero-pretitle">TACTICAL MISSION SUPPORT</div>
                 <h1 class="hero-title">CONTACT <span>NETHAWK</span></h1>
-                <p class="hero-text">Connect directly with our flight operations, sensor payload engineers, asset protection teams, and NATI academy instructors.</p>
+                <p class="hero-text">Connect directly with our flight operations, asset protection, and NATI academy specialists.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section (VectorNav Light Style) -->
+    <!-- Contact Form Section (VectorNav Style) -->
     <section class="contact-section">
         <div class="container">
             <div class="contact-form-wrap">
-                <form onsubmit="event.preventDefault(); alert('Thank you! Your inquiry has been transmitted to NetHawk Mission Support.');">
+                <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been transmitted to NetHawk Mission Support.');">
                     <div class="form-grid">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="First Name *" required>
@@ -120,25 +86,24 @@
                             <input type="email" class="form-control" placeholder="Email Address *" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Job Title / Department">
+                            <input type="text" class="form-control" placeholder="Job Title">
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Phone Number">
+                            <input type="tel" class="form-control" placeholder="Telephone Number">
                         </div>
                         <div class="form-group full-width">
                             <div class="form-checkbox-group">
-                                <span style="font-weight: 700; font-family: var(--font-heading); font-size: 0.9rem; text-transform: uppercase;">Inquiry Category:</span>
-                                <label class="checkbox-label"><input type="checkbox"> Sales & Hardware Quotes</label>
-                                <label class="checkbox-label"><input type="checkbox"> Technical & Telemetry Support</label>
+                                <span style="font-weight: 700; font-family: var(--font-heading); font-size: 0.95rem; text-transform: uppercase;">Inquiry Category:</span>
+                                <label class="checkbox-label"><input type="checkbox"> Sales Support</label>
+                                <label class="checkbox-label"><input type="checkbox"> Technical Support</label>
                                 <label class="checkbox-label"><input type="checkbox"> NATI Flight Academy</label>
-                                <label class="checkbox-label"><input type="checkbox"> Security Assessment</label>
                             </div>
                         </div>
                         <div class="form-group full-width">
                             <textarea class="form-control" placeholder="Message / Mission Specifications *" required></textarea>
                         </div>
                     </div>
-                    <button type="submit" class="btn-vn-solid" style="width: 100%; justify-content: center; font-size: 0.95rem; padding: 16px;">Transmit Inquiry &rarr;</button>
+                    <button type="submit" class="btn-vn-solid" style="width: 100%; justify-content: center;">Submit Inquiry &rarr;</button>
                 </form>
             </div>
         </div>
@@ -149,7 +114,7 @@
         <div class="container">
             <div class="footer-bottom-legal">
                 <span>Copyright &copy; 2026 NetHawk Solutions LLC. All rights reserved.</span>
-                <span>NCAA & BVLOS Regulatory Certified | ISO 9001:2015</span>
+                <span>NCAA & BVLOS Regulatory Certified</span>
             </div>
         </div>
         <div class="footer-red-bar">
@@ -157,14 +122,12 @@
                 <div class="footer-red-links">
                     <a href="index.html">HOME</a>
                     <a href="services.html">PRODUCTS & SOLUTIONS</a>
-                    <a href="about.html">ABOUT US</a>
-                    <a href="contact.html">CONTACT SUPPORT</a>
+                    <a href="contact.html">CONTACT US</a>
                 </div>
                 <div>NETHAWK DEFENSE & AVIATION</div>
             </div>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
 </body>
 </html>

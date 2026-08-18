@@ -24,18 +24,30 @@
                 <span class="brand-title-text">NETHAWK</span>
             </a>
 
-            <!-- Navigation Links -->
+            <!-- Desktop Navigation Links -->
             <ul class="nav-menu-links">
+                <li><a href="index.html" class="active">HOME</a></li>
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="services.html">SERVICES</a></li>
                 <li><a href="contact.html">CONTACT US</a></li>
             </ul>
 
-            <!-- Header Action CTA -->
+            <!-- Header Action CTA & Mobile Trigger -->
             <div class="nav-actions-wrap">
                 <a href="contact.html" class="btn-header-cta">GET IN TOUCH</a>
                 <button class="mobile-burger-icon" id="burgerBtn" aria-label="Toggle Navigation">&#9776;</button>
             </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div class="mobile-nav-drawer" id="mobileDrawer">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+            <a href="contact.html" class="btn-primary-blue mobile-drawer-cta">GET IN TOUCH &gt;</a>
         </div>
     </header>
 
@@ -610,6 +622,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const navbar = document.getElementById('navbar');
             const burgerBtn = document.getElementById('burgerBtn');
+            const mobileDrawer = document.getElementById('mobileDrawer');
 
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 40) {
@@ -619,12 +632,17 @@
                 }
             });
 
-            if (burgerBtn) {
+            if (burgerBtn && mobileDrawer) {
                 burgerBtn.addEventListener('click', () => {
-                    const navMenu = document.querySelector('.nav-menu-links');
-                    if (navMenu) {
-                        navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-                    }
+                    mobileDrawer.classList.toggle('open');
+                    burgerBtn.innerHTML = mobileDrawer.classList.contains('open') ? '&times;' : '&#9776;';
+                });
+
+                mobileDrawer.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileDrawer.classList.remove('open');
+                        burgerBtn.innerHTML = '&#9776;';
+                    });
                 });
             }
         });

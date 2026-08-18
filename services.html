@@ -6,74 +6,74 @@
     <title>Products & Services | NetHawk Solutions</title>
     <meta name="description" content="Explore NetHawk Solutions services in UAV aerial surveillance, executive protection, asset security, and NATI drone pilot certification.">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Top Utility Bar -->
-    <div class="top-bar">
-        <div class="container top-bar-container">
-            <a href="contact.html">CONTACT US</a>
-            <span>|</span>
-            <a href="index.html#solutions">AVIATION PRIMER</a>
-            <span>|</span>
-            <a href="about.html#nati">NATI PORTAL</a>
-            <span>|</span>
-            <a href="tel:+2349067879766">📞 +234(0) 906 7879 766</a>
-        </div>
-    </div>
-
     <!-- Header Navigation -->
     <header class="site-header" id="navbar">
         <div class="container header-container">
-            <a href="index.html" class="brand-logo" aria-label="NetHawk Solutions Home">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-logo-wrap" aria-label="NetHawk Solutions Home">
                 <img src="assets/images/Nethawk Logo.png" alt="NetHawk Solutions" class="brand-logo-img">
+                <span class="brand-title-text">NETHAWK</span>
             </a>
 
-            <div class="nav-links-wrap">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html" class="active">Products & Solutions</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="index.html#resources">Resources</a></li>
-                    <li><a href="index.html#news">Newsroom</a></li>
-                </ul>
-                <a href="contact.html" class="btn-nav-cta">Contact Us</a>
-            </div>
+            <!-- Desktop Navigation Links -->
+            <ul class="nav-menu-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="services.html" class="active">SERVICES</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
 
-            <button class="burger-menu-btn" id="burgerBtn" aria-label="Open Navigation Menu">
-                <span></span><span></span><span></span>
-            </button>
+            <!-- Header Action CTA & Mobile Trigger -->
+            <div class="nav-actions-wrap">
+                <a href="contact.html" class="btn-header-cta">GET IN TOUCH</a>
+                <button class="mobile-burger-icon" id="burgerBtn" aria-label="Toggle Navigation">&#9776;</button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div class="mobile-nav-drawer" id="mobileDrawer">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="services.html" class="active">SERVICES</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+            <a href="contact.html" class="btn-primary-blue mobile-drawer-cta">GET IN TOUCH &gt;</a>
         </div>
     </header>
 
     <!-- Hero Banner -->
-    <section class="hero-section" style="min-height: 55vh;">
-        <video class="hero-video" autoplay loop muted playsinline poster="assets/images/hero_surveillance_drone_1786471673372.png">
+    <section class="hero-section" style="min-height: 50vh;">
+        <video class="hero-bg-video" autoplay loop muted playsinline poster="assets/images/hero_surveillance_drone_1786471673372.png">
             <source src="assets/videos/hero_background.mp4" type="video/mp4">
         </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-wireframe-grid"></div>
+        <div class="hero-overlay-mask"></div>
+        <div class="hero-grid-pattern"></div>
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-pretitle">SYSTEMS & CAPABILITIES</div>
-                <h1 class="hero-title">PRODUCTS & <span>SOLUTIONS</span></h1>
-                <p class="hero-text">End-to-end tactical aviation, intelligent reconnaissance, and security services for complex missions.</p>
+            <div class="hero-content-box" style="padding: 40px 0;">
+                <div class="hero-pills-row">
+                    <span class="hero-pill-badge">SYSTEMS</span>
+                    <span>&bull;</span>
+                    <span class="hero-pill-badge">CAPABILITIES</span>
+                </div>
+                <h1 class="hero-headline">PRODUCTS & SERVICES</h1>
+                <p class="hero-subheadline">End-to-end tactical aviation, intelligent reconnaissance, and security services for complex missions.</p>
             </div>
         </div>
     </section>
 
     <!-- Services Finder Section -->
-    <section class="solutions-finder-section" style="padding: 90px 0;">
+    <section class="solutions-section">
         <div class="container">
-            <div class="solutions-finder-grid" style="grid-template-columns: 1fr; gap: 30px;">
+            <div style="display: flex; flex-direction: column; gap: 24px;">
                 
                 <!-- Service 1 -->
-                <div class="solution-finder-card" id="uav" style="flex-direction: column; align-items: flex-start; gap: 20px;">
+                <div class="solution-finder-card" id="uav">
                     <div class="solution-card-left">
                         <div class="solution-card-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
@@ -83,11 +83,11 @@
                             <p>Long-range BVLOS operations, thermal payload sensors, automated perimeter security sweeps, and live encrypted HD video telemetry feeds to remote command centers.</p>
                         </div>
                     </div>
-                    <a href="contact.html" class="btn-vn-solid" style="padding: 12px 28px; font-size: 0.9rem;">Inquire System Specs &rarr;</a>
+                    <a href="contact.html" class="btn-primary-blue" style="padding: 12px 24px; font-size: 0.85rem; white-space: nowrap;">INQUIRE SPECS &gt;</a>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="solution-finder-card" id="security" style="flex-direction: column; align-items: flex-start; gap: 20px;">
+                <div class="solution-finder-card" id="security">
                     <div class="solution-card-left">
                         <div class="solution-card-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -97,11 +97,25 @@
                             <p>Comprehensive vulnerability assessments, VIP protection, armed tactical escorts, and critical infrastructure risk mitigation strategies for energy and corporate sectors.</p>
                         </div>
                     </div>
-                    <a href="contact.html" class="btn-vn-solid" style="padding: 12px 28px; font-size: 0.9rem;">Inquire Security Solutions &rarr;</a>
+                    <a href="contact.html" class="btn-primary-blue" style="padding: 12px 24px; font-size: 0.85rem; white-space: nowrap;">INQUIRE SECURITY &gt;</a>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="solution-finder-card" id="aviation" style="flex-direction: column; align-items: flex-start; gap: 20px;">
+                <div class="solution-finder-card" id="tech">
+                    <div class="solution-card-left">
+                        <div class="solution-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M6 12h12M12 6v12"/></svg>
+                        </div>
+                        <div class="solution-card-info">
+                            <h3>TACTICAL HARDWARE & COMMAND SYSTEMS</h3>
+                            <p>Military-grade encrypted communications, ground control stations (GCS), AI target flagging, and multi-sensor payload integrations.</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn-primary-blue" style="padding: 12px 24px; font-size: 0.85rem; white-space: nowrap;">INQUIRE HARDWARE &gt;</a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="solution-finder-card" id="logistics">
                     <div class="solution-card-left">
                         <div class="solution-card-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
@@ -111,7 +125,7 @@
                             <p>Specialized logistics for remote locations, emergency payload delivery, drone fleet maintenance, and full-spectrum flight operations management.</p>
                         </div>
                     </div>
-                    <a href="contact.html" class="btn-vn-solid" style="padding: 12px 28px; font-size: 0.9rem;">Inquire Aviation Logistics &rarr;</a>
+                    <a href="contact.html" class="btn-primary-blue" style="padding: 12px 24px; font-size: 0.85rem; white-space: nowrap;">INQUIRE LOGISTICS &gt;</a>
                 </div>
 
             </div>
@@ -121,22 +135,79 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-bottom-legal">
-                <span>Copyright &copy; 2026 NetHawk Solutions LLC. All rights reserved.</span>
-                <span>NCAA & BVLOS Regulatory Certified</span>
-            </div>
-        </div>
-        <div class="footer-red-bar">
-            <div class="container footer-red-container">
-                <div class="footer-red-links">
-                    <a href="index.html">HOME</a>
-                    <a href="services.html">PRODUCTS & SOLUTIONS</a>
-                    <a href="contact.html">CONTACT US</a>
+            <div class="footer-top-grid">
+                <div class="footer-brand-col">
+                    <div class="brand-logo-wrap">
+                        <img src="assets/images/Nethawk Logo.png" alt="NetHawk Solutions" class="brand-logo-img">
+                        <span class="brand-title-text">NETHAWK</span>
+                    </div>
+                    <p>
+                        Enterprise defense surveillance, BVLOS tactical aviation, and security intelligence built for mission-critical operations.
+                    </p>
                 </div>
-                <div>NETHAWK DEFENSE & AVIATION</div>
+                <div>
+                    <h4 class="footer-col-title">QUICK LINKS</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">SERVICES</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="services.html#uav">UAV Aviation</a></li>
+                        <li><a href="services.html#security">Security & Risk</a></li>
+                        <li><a href="services.html#tech">Technology Systems</a></li>
+                        <li><a href="services.html#logistics">Tactical Logistics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">CONTACT INFO</h4>
+                    <ul class="footer-links-list">
+                        <li><span>📍 Abuja & Lagos, Nigeria</span></li>
+                        <li><a href="tel:+2349067879766">📞 +234(0) 906 7879 766</a></li>
+                        <li><a href="mailto:info@nethawksolutions.com">✉️ info@nethawksolutions.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <span>&copy; 2026 NetHawk Solutions LLC. All rights reserved. | NCAA & BVLOS Regulatory Certified</span>
             </div>
         </div>
     </footer>
 
+    <!-- Interactive Navigation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+            const burgerBtn = document.getElementById('burgerBtn');
+            const mobileDrawer = document.getElementById('mobileDrawer');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 40) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            if (burgerBtn && mobileDrawer) {
+                burgerBtn.addEventListener('click', () => {
+                    mobileDrawer.classList.toggle('open');
+                    burgerBtn.innerHTML = mobileDrawer.classList.contains('open') ? '&times;' : '&#9776;';
+                });
+
+                mobileDrawer.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileDrawer.classList.remove('open');
+                        burgerBtn.innerHTML = '&#9776;';
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>

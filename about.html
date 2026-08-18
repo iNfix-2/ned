@@ -6,103 +6,104 @@
     <title>About NetHawk & NATI | NetHawk Solutions</title>
     <meta name="description" content="Learn about NetHawk Solutions - leading providers of integrated security, UAV aerial surveillance, and aviation services in Nigeria and across Africa.">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Top Utility Bar -->
-    <div class="top-bar">
-        <div class="container top-bar-container">
-            <a href="contact.html">CONTACT US</a>
-            <span>|</span>
-            <a href="index.html#solutions">AVIATION PRIMER</a>
-            <span>|</span>
-            <a href="#nati">NATI PORTAL</a>
-            <span>|</span>
-            <a href="tel:+2349067879766">📞 +234(0) 906 7879 766</a>
-        </div>
-    </div>
-
     <!-- Header Navigation -->
     <header class="site-header" id="navbar">
         <div class="container header-container">
-            <a href="index.html" class="brand-logo" aria-label="NetHawk Solutions Home">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-logo-wrap" aria-label="NetHawk Solutions Home">
                 <img src="assets/images/Nethawk Logo.png" alt="NetHawk Solutions" class="brand-logo-img">
+                <span class="brand-title-text">NETHAWK</span>
             </a>
 
-            <div class="nav-links-wrap">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Products & Solutions</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="index.html#resources">Resources</a></li>
-                    <li><a href="index.html#news">Newsroom</a></li>
-                </ul>
-                <a href="contact.html" class="btn-nav-cta">Contact Us</a>
-            </div>
+            <!-- Desktop Navigation Links -->
+            <ul class="nav-menu-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html" class="active">ABOUT US</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
 
-            <button class="burger-menu-btn" id="burgerBtn" aria-label="Open Navigation Menu">
-                <span></span><span></span><span></span>
-            </button>
+            <!-- Header Action CTA & Mobile Trigger -->
+            <div class="nav-actions-wrap">
+                <a href="contact.html" class="btn-header-cta">GET IN TOUCH</a>
+                <button class="mobile-burger-icon" id="burgerBtn" aria-label="Toggle Navigation">&#9776;</button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div class="mobile-nav-drawer" id="mobileDrawer">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html" class="active">ABOUT US</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+            <a href="contact.html" class="btn-primary-blue mobile-drawer-cta">GET IN TOUCH &gt;</a>
         </div>
     </header>
 
     <!-- Banner -->
-    <section class="hero-section" style="min-height: 55vh;">
-        <video class="hero-video" autoplay loop muted playsinline poster="assets/images/about_drone_mission_1786471689876.png">
+    <section class="hero-section" style="min-height: 50vh;">
+        <video class="hero-bg-video" autoplay loop muted playsinline poster="assets/images/about_drone_mission_1786471689876.png">
             <source src="assets/videos/hero_background.mp4" type="video/mp4">
         </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-wireframe-grid"></div>
+        <div class="hero-overlay-mask"></div>
+        <div class="hero-grid-pattern"></div>
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-pretitle">COMPANY PROFILE & NATI ACADEMY</div>
-                <h1 class="hero-title">ABOUT <span>NETHAWK</span></h1>
-                <p class="hero-text">Engineered for complex missions. Driven by purpose and operational precision.</p>
+            <div class="hero-content-box" style="padding: 40px 0;">
+                <div class="hero-pills-row">
+                    <span class="hero-pill-badge">COMPANY PROFILE</span>
+                    <span>&bull;</span>
+                    <span class="hero-pill-badge">NATI ACADEMY</span>
+                </div>
+                <h1 class="hero-headline">ABOUT NETHAWK</h1>
+                <p class="hero-subheadline">Engineered for complex missions. Driven by purpose and operational precision.</p>
             </div>
         </div>
     </section>
 
     <!-- Mission & Company Overview -->
-    <section class="solutions-finder-section" style="padding: 90px 0;">
+    <section class="about-nethawk-section">
         <div class="container">
-            <div class="solutions-finder-grid" style="grid-template-columns: 1fr 1fr; align-items: center;">
-                <div>
-                    <h2 class="section-title-heading dark" style="margin-bottom: 20px;">PROTECTING CRITICAL ASSETS & OPERATIONS</h2>
-                    <p style="font-size: 1.05rem; color: var(--vn-text-muted-dark); line-height: 1.7; margin-bottom: 20px;">
+            <div class="about-grid-wrap">
+                <div class="about-content-left">
+                    <span class="section-tag-pill">OUR MISSION</span>
+                    <h2>PROTECTING CRITICAL ASSETS & INFRASTRUCTURE</h2>
+                    <p>
                         NetHawk Solutions delivers integrated security, tactical aviation, and intelligent reconnaissance solutions designed for high-risk, high-stakes environments. We combine ground tactical defense with cutting-edge aerial UAV intelligence.
                     </p>
-                    <p style="font-size: 1.05rem; color: var(--vn-text-muted-dark); line-height: 1.7;">
+                    <p>
                         Our teams include certified BVLOS UAV pilots, military-trained security strategists, and software integration engineers working together to eliminate security blind spots for energy grids, dams, pipelines, and corporate infrastructures.
                     </p>
                 </div>
-                <div>
-                    <img src="assets/images/about_drone_mission_1786471689876.png" alt="NetHawk Mission" style="border-radius: var(--radius-xs); border: 1px solid var(--vn-light-border);">
+                <div class="about-media-card">
+                    <img src="assets/images/about_drone_mission_1786471689876.png" alt="NetHawk Mission">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- NATI Section -->
-    <section class="industries-navigate-section" id="nati">
+    <section class="train-section" id="nati">
         <div class="container">
-            <div class="section-heading-center">
-                <h2 class="section-title-heading light">NATI — NETHAWK AVIATION TRAINING INSTITUTE</h2>
-            </div>
-            <div class="industry-display-stage" style="grid-template-columns: 1fr 1fr;">
-                <div class="industry-stage-media">
+            <div class="train-card-split">
+                <div class="train-media-frame">
                     <img src="assets/images/nati_training_pilot_1786471709008.png" alt="NATI Flight Operations">
                 </div>
-                <div class="industry-stage-info">
-                    <h3>DUAL-LICENSED PILOT CERTIFICATION</h3>
+                <div class="train-info-box">
+                    <span class="section-tag-pill">NATI FLIGHT ACADEMY</span>
+                    <h2 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; margin-bottom: 16px;">DUAL-LICENSED PILOT CERTIFICATION</h2>
                     <p>
                         NATI is NetHawk’s specialized flight institute designed to equip commercial, defense, and emergency operators with advanced flight theory, BVLOS navigation, thermal payload operations, and regulatory aviation law.
                     </p>
-                    <a href="contact.html" class="btn-vn-solid">Enroll in NATI Academy &rarr;</a>
+                    <a href="contact.html" class="btn-primary-blue" style="margin-top: 16px;">
+                        ENROLL IN NATI ACADEMY &gt;
+                    </a>
                 </div>
             </div>
         </div>
@@ -111,22 +112,79 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-bottom-legal">
-                <span>Copyright &copy; 2026 NetHawk Solutions LLC. All rights reserved.</span>
-                <span>NCAA & BVLOS Regulatory Certified</span>
-            </div>
-        </div>
-        <div class="footer-red-bar">
-            <div class="container footer-red-container">
-                <div class="footer-red-links">
-                    <a href="index.html">HOME</a>
-                    <a href="services.html">PRODUCTS & SOLUTIONS</a>
-                    <a href="contact.html">CONTACT US</a>
+            <div class="footer-top-grid">
+                <div class="footer-brand-col">
+                    <div class="brand-logo-wrap">
+                        <img src="assets/images/Nethawk Logo.png" alt="NetHawk Solutions" class="brand-logo-img">
+                        <span class="brand-title-text">NETHAWK</span>
+                    </div>
+                    <p>
+                        Enterprise defense surveillance, BVLOS tactical aviation, and security intelligence built for mission-critical operations.
+                    </p>
                 </div>
-                <div>NETHAWK DEFENSE & AVIATION</div>
+                <div>
+                    <h4 class="footer-col-title">QUICK LINKS</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">SERVICES</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="services.html#uav">UAV Aviation</a></li>
+                        <li><a href="services.html#security">Security & Risk</a></li>
+                        <li><a href="services.html#tech">Technology Systems</a></li>
+                        <li><a href="services.html#logistics">Tactical Logistics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">CONTACT INFO</h4>
+                    <ul class="footer-links-list">
+                        <li><span>📍 Abuja & Lagos, Nigeria</span></li>
+                        <li><a href="tel:+2349067879766">📞 +234(0) 906 7879 766</a></li>
+                        <li><a href="mailto:info@nethawksolutions.com">✉️ info@nethawksolutions.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <span>&copy; 2026 NetHawk Solutions LLC. All rights reserved. | NCAA & BVLOS Regulatory Certified</span>
             </div>
         </div>
     </footer>
 
+    <!-- Interactive Navigation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+            const burgerBtn = document.getElementById('burgerBtn');
+            const mobileDrawer = document.getElementById('mobileDrawer');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 40) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            if (burgerBtn && mobileDrawer) {
+                burgerBtn.addEventListener('click', () => {
+                    mobileDrawer.classList.toggle('open');
+                    burgerBtn.innerHTML = mobileDrawer.classList.contains('open') ? '&times;' : '&#9776;';
+                });
+
+                mobileDrawer.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileDrawer.classList.remove('open');
+                        burgerBtn.innerHTML = '&#9776;';
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>

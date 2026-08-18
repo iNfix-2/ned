@@ -6,68 +6,68 @@
     <title>Contact Us | NetHawk Solutions</title>
     <meta name="description" content="Get in touch with NetHawk Solutions for security inquiries, drone flight operations, and training programs.">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Top Utility Bar -->
-    <div class="top-bar">
-        <div class="container top-bar-container">
-            <a href="contact.html">CONTACT US</a>
-            <span>|</span>
-            <a href="index.html#solutions">AVIATION PRIMER</a>
-            <span>|</span>
-            <a href="about.html#nati">NATI PORTAL</a>
-            <span>|</span>
-            <a href="tel:+2349067879766">📞 +234(0) 906 7879 766</a>
-        </div>
-    </div>
-
     <!-- Header Navigation -->
     <header class="site-header" id="navbar">
         <div class="container header-container">
-            <a href="index.html" class="brand-logo" aria-label="NetHawk Solutions Home">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-logo-wrap" aria-label="NetHawk Solutions Home">
                 <img src="assets/images/Nethawk Logo.png" alt="NetHawk Solutions" class="brand-logo-img">
+                <span class="brand-title-text">NETHAWK</span>
             </a>
 
-            <div class="nav-links-wrap">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Products & Solutions</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="index.html#resources">Resources</a></li>
-                    <li><a href="index.html#news">Newsroom</a></li>
-                </ul>
-                <a href="contact.html" class="btn-nav-cta" style="background-color: var(--vn-red);">Contact Us</a>
-            </div>
+            <!-- Desktop Navigation Links -->
+            <ul class="nav-menu-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="contact.html" class="active">CONTACT US</a></li>
+            </ul>
 
-            <button class="burger-menu-btn" id="burgerBtn" aria-label="Open Navigation Menu">
-                <span></span><span></span><span></span>
-            </button>
+            <!-- Header Action CTA & Mobile Trigger -->
+            <div class="nav-actions-wrap">
+                <a href="contact.html" class="btn-header-cta">GET IN TOUCH</a>
+                <button class="mobile-burger-icon" id="burgerBtn" aria-label="Toggle Navigation">&#9776;</button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div class="mobile-nav-drawer" id="mobileDrawer">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="contact.html" class="active">CONTACT US</a></li>
+            </ul>
+            <a href="contact.html" class="btn-primary-blue mobile-drawer-cta">GET IN TOUCH &gt;</a>
         </div>
     </header>
 
     <!-- Banner -->
     <section class="hero-section" style="min-height: 50vh;">
-        <video class="hero-video" autoplay loop muted playsinline poster="assets/images/about_drone_mission_1786471689876.png">
+        <video class="hero-bg-video" autoplay loop muted playsinline poster="assets/images/about_drone_mission_1786471689876.png">
             <source src="assets/videos/hero_background.mp4" type="video/mp4">
         </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-wireframe-grid"></div>
+        <div class="hero-overlay-mask"></div>
+        <div class="hero-grid-pattern"></div>
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-pretitle">TACTICAL MISSION SUPPORT</div>
-                <h1 class="hero-title">CONTACT <span>NETHAWK</span></h1>
-                <p class="hero-text">Connect directly with our flight operations, asset protection, and NATI academy specialists.</p>
+            <div class="hero-content-box" style="padding: 40px 0;">
+                <div class="hero-pills-row">
+                    <span class="hero-pill-badge">TACTICAL SUPPORT</span>
+                    <span>&bull;</span>
+                    <span class="hero-pill-badge">MISSION INQUIRIES</span>
+                </div>
+                <h1 class="hero-headline">CONTACT NETHAWK</h1>
+                <p class="hero-subheadline">Connect directly with our flight operations, asset protection, and NATI academy specialists.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section (VectorNav Style) -->
+    <!-- Contact Form Section -->
     <section class="contact-section">
         <div class="container">
             <div class="contact-form-wrap">
@@ -86,14 +86,14 @@
                             <input type="email" class="form-control" placeholder="Email Address *" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Job Title">
+                            <input type="tel" class="form-control" placeholder="Telephone Number">
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Telephone Number">
+                            <input type="text" class="form-control" placeholder="Job Title">
                         </div>
                         <div class="form-group full-width">
                             <div class="form-checkbox-group">
-                                <span style="font-weight: 700; font-family: var(--font-heading); font-size: 0.95rem; text-transform: uppercase;">Inquiry Category:</span>
+                                <span style="font-weight: 700; font-family: var(--font-heading); font-size: 0.95rem; text-transform: uppercase; color: var(--color-text-white);">Inquiry Category:</span>
                                 <label class="checkbox-label"><input type="checkbox"> Sales Support</label>
                                 <label class="checkbox-label"><input type="checkbox"> Technical Support</label>
                                 <label class="checkbox-label"><input type="checkbox"> NATI Flight Academy</label>
@@ -103,7 +103,7 @@
                             <textarea class="form-control" placeholder="Message / Mission Specifications *" required></textarea>
                         </div>
                     </div>
-                    <button type="submit" class="btn-vn-solid" style="width: 100%; justify-content: center;">Submit Inquiry &rarr;</button>
+                    <button type="submit" class="btn-primary-blue" style="width: 100%; justify-content: center; margin-top: 24px;">SUBMIT INQUIRY &gt;</button>
                 </form>
             </div>
         </div>
@@ -112,22 +112,79 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-bottom-legal">
-                <span>Copyright &copy; 2026 NetHawk Solutions LLC. All rights reserved.</span>
-                <span>NCAA & BVLOS Regulatory Certified</span>
-            </div>
-        </div>
-        <div class="footer-red-bar">
-            <div class="container footer-red-container">
-                <div class="footer-red-links">
-                    <a href="index.html">HOME</a>
-                    <a href="services.html">PRODUCTS & SOLUTIONS</a>
-                    <a href="contact.html">CONTACT US</a>
+            <div class="footer-top-grid">
+                <div class="footer-brand-col">
+                    <div class="brand-logo-wrap">
+                        <img src="assets/images/Nethawk Logo.png" alt="NetHawk Solutions" class="brand-logo-img">
+                        <span class="brand-title-text">NETHAWK</span>
+                    </div>
+                    <p>
+                        Enterprise defense surveillance, BVLOS tactical aviation, and security intelligence built for mission-critical operations.
+                    </p>
                 </div>
-                <div>NETHAWK DEFENSE & AVIATION</div>
+                <div>
+                    <h4 class="footer-col-title">QUICK LINKS</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">SERVICES</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="services.html#uav">UAV Aviation</a></li>
+                        <li><a href="services.html#security">Security & Risk</a></li>
+                        <li><a href="services.html#tech">Technology Systems</a></li>
+                        <li><a href="services.html#logistics">Tactical Logistics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">CONTACT INFO</h4>
+                    <ul class="footer-links-list">
+                        <li><span>📍 Abuja & Lagos, Nigeria</span></li>
+                        <li><a href="tel:+2349067879766">📞 +234(0) 906 7879 766</a></li>
+                        <li><a href="mailto:info@nethawksolutions.com">✉️ info@nethawksolutions.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <span>&copy; 2026 NetHawk Solutions LLC. All rights reserved. | NCAA & BVLOS Regulatory Certified</span>
             </div>
         </div>
     </footer>
 
+    <!-- Interactive Navigation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+            const burgerBtn = document.getElementById('burgerBtn');
+            const mobileDrawer = document.getElementById('mobileDrawer');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 40) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            if (burgerBtn && mobileDrawer) {
+                burgerBtn.addEventListener('click', () => {
+                    mobileDrawer.classList.toggle('open');
+                    burgerBtn.innerHTML = mobileDrawer.classList.contains('open') ? '&times;' : '&#9776;';
+                });
+
+                mobileDrawer.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileDrawer.classList.remove('open');
+                        burgerBtn.innerHTML = '&#9776;';
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>

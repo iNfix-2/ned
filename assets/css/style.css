@@ -87,21 +87,6 @@ img, video {
 .text-center { text-align: center; }
 .text-blue { color: var(--color-blue-primary); }
 
-.section-tag-pill {
-  display: inline-block;
-  font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  color: var(--color-blue-primary);
-  margin-bottom: 8px;
-}
-
-.section-tag-pill.light {
-  color: var(--color-blue-primary);
-}
-
 .section-title-main {
   font-family: var(--font-heading);
   font-size: clamp(1.6rem, 3.2vw, 2.5rem);
@@ -167,37 +152,28 @@ img, video {
 .brand-logo-wrap {
   display: flex;
   align-items: center;
-  gap: 12px;
   z-index: 1002;
 }
 
 .brand-logo-img {
-  height: 36px;
+  height: 42px;
   width: auto;
   object-fit: contain;
   filter: brightness(2) saturate(1.6);
 }
 
-.brand-title-text {
-  font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: var(--color-text-white);
-}
-
 .nav-menu-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 36px;
   list-style: none;
 }
 
 .nav-menu-links a {
   font-family: var(--font-heading);
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   font-weight: 700;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
   color: var(--color-text-dim);
   padding: 8px 0;
@@ -206,32 +182,6 @@ img, video {
 .nav-menu-links a:hover,
 .nav-menu-links a.active {
   color: var(--color-blue-primary);
-}
-
-.nav-actions-wrap {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.btn-header-cta {
-  font-family: var(--font-heading);
-  background-color: var(--color-blue-primary);
-  color: var(--color-text-white);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: var(--radius-sm);
-  transition: var(--transition);
-  white-space: nowrap;
-}
-
-.btn-header-cta:hover {
-  background-color: var(--color-blue-hover);
-  box-shadow: var(--shadow-blue-glow);
-  transform: translateY(-2px);
 }
 
 /* Mobile Burger Button */
@@ -307,13 +257,6 @@ img, video {
   color: var(--color-blue-primary);
 }
 
-.mobile-nav-drawer .mobile-drawer-cta {
-  width: 100%;
-  max-width: 280px;
-  text-align: center;
-  margin-top: 10px;
-}
-
 /* ==========================================================================
    Hero Section
    ========================================================================== */
@@ -363,27 +306,6 @@ img, video {
   z-index: 2;
   max-width: 680px;
   padding: 80px 0;
-}
-
-.hero-pills-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-  font-family: var(--font-heading);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  flex-wrap: wrap;
-}
-
-.hero-pill-badge {
-  color: var(--color-blue-primary);
-  background: rgba(0, 102, 255, 0.12);
-  border: 1px solid rgba(0, 102, 255, 0.3);
-  padding: 4px 14px;
-  border-radius: 50px;
-  text-transform: uppercase;
 }
 
 .hero-headline {
@@ -1216,13 +1138,14 @@ textarea.form-control {
 .solution-finder-card {
   background: var(--color-dark-card);
   border: 1px solid var(--color-dark-border);
-  padding: 32px;
+  padding: 36px;
   border-radius: var(--radius-md);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 24px;
+  gap: 32px;
   transition: var(--transition);
+  position: relative;
 }
 
 .solution-finder-card:hover {
@@ -1234,12 +1157,12 @@ textarea.form-control {
 .solution-card-left {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 24px;
 }
 
 .solution-card-icon {
-  width: 50px;
-  height: 50px;
+  width: 54px;
+  height: 54px;
   background: rgba(0, 102, 255, 0.12);
   border: 1px solid rgba(0, 102, 255, 0.3);
   color: var(--color-blue-primary);
@@ -1251,22 +1174,46 @@ textarea.form-control {
 }
 
 .solution-card-icon svg {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
 }
 
 .solution-card-info h3 {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: var(--color-text-white);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
 .solution-card-info p {
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   color: var(--color-text-dim);
-  line-height: 1.6;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.service-specs-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 16px;
+  list-style: none;
+  margin-top: 12px;
+}
+
+.service-specs-list li {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.service-specs-list li::before {
+  content: '▸';
+  color: var(--color-blue-primary);
+  font-weight: bold;
 }
 
 /* ==========================================================================
@@ -1281,7 +1228,7 @@ textarea.form-control {
 
 .footer-top-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
   gap: 40px;
   margin-bottom: 50px;
 }
@@ -1375,10 +1322,19 @@ textarea.form-control {
   .about-grid-wrap,
   .tech-grid-layout,
   .why-choose-grid,
-  .train-card-split,
-  .footer-top-grid {
+  .train-card-split {
     grid-template-columns: 1fr;
     gap: 36px;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  .footer-brand-col {
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
   }
 
   .about-media-card,
@@ -1399,26 +1355,37 @@ textarea.form-control {
     height: 66px;
   }
 
+  /* Center Logo on Mobile & Position Burger on the Right */
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .brand-logo-wrap {
+    margin: 0 auto;
+  }
+
+  .brand-logo-img {
+    height: 34px;
+  }
+
   .nav-menu-links {
     display: none;
   }
 
   .mobile-burger-icon {
     display: block;
-  }
-
-  .btn-header-cta {
-    padding: 8px 14px;
-    font-size: 0.75rem;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .hero-content-box {
-    padding: 60px 0;
+    padding: 50px 0;
     text-align: center;
-  }
-
-  .hero-pills-row {
-    justify-content: center;
   }
 
   .hero-subheadline {
@@ -1453,7 +1420,7 @@ textarea.form-control {
   .certifications-section,
   .clients-section,
   .contact-section {
-    padding: 50px 0;
+    padding: 45px 0;
   }
 
   .solutions-header-row {
@@ -1483,7 +1450,7 @@ textarea.form-control {
 
   .solution-finder-card {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 24px;
   }
 
@@ -1491,9 +1458,36 @@ textarea.form-control {
     flex-direction: column;
   }
 
-  .footer-top-grid {
+  .service-specs-list {
     grid-template-columns: 1fr;
-    gap: 30px;
+  }
+
+  /* 3-Column Footer Layout on Mobile View */
+  .footer-top-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 12px;
+  }
+
+  .footer-brand-col {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-social-icons {
+    justify-content: center;
+  }
+
+  .footer-col-title {
+    font-size: 0.82rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+  }
+
+  .footer-links-list a,
+  .footer-links-list span {
+    font-size: 0.8rem;
   }
 }
 
@@ -1503,13 +1497,8 @@ textarea.form-control {
     padding: 0 14px;
   }
 
-  .brand-title-text {
-    font-size: 1.15rem;
-    letter-spacing: 1px;
-  }
-
   .brand-logo-img {
-    height: 28px;
+    height: 30px;
   }
 
   .capabilities-grid,
@@ -1524,28 +1513,45 @@ textarea.form-control {
   .industries-icons-grid,
   .clients-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    gap: 12px;
   }
 
   .stat-card-white {
-    padding: 20px 14px;
+    padding: 18px 12px;
   }
 
   .stat-number-big {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .industry-icon-card {
-    padding: 20px 10px;
+    padding: 18px 8px;
   }
 
   .cert-card {
-    padding: 20px 12px;
-    font-size: 0.88rem;
+    padding: 18px 10px;
+    font-size: 0.85rem;
   }
 
   .solution-visual-card {
     height: 220px;
     padding: 16px;
+  }
+
+  /* 3-Column Footer Layout Remains Crisp on Small Smartphones */
+  .footer-top-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 8px;
+  }
+
+  .footer-col-title {
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+  }
+
+  .footer-links-list a,
+  .footer-links-list span {
+    font-size: 0.76rem;
+    word-break: break-word;
   }
 }

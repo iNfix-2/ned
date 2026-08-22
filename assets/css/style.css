@@ -12,13 +12,13 @@
   --color-dark-card: #04070d;      /* Pitch Black Tactical Card */
   --color-dark-card-hover: #090f1d;
   --color-dark-border: #141f33;    /* Card Border */
-  --color-border-glow: rgba(0, 102, 255, 0.4);
+  --color-border-glow: rgba(0, 71, 171, 0.4);
 
-  --color-blue-primary: #0066FF;   /* Primary Vivid Blue Accent */
-  --color-blue-hover: #0052CC;
-  --color-blue-dark: #0038B8;
+  --color-blue-primary: #0047AB;   /* Darker Deep Tactical Blue Accent */
+  --color-blue-hover: #003685;     /* Darker Hover Blue */
+  --color-blue-dark: #002660;
   --color-blue-light: #EBF3FF;
-  --color-blue-glow: rgba(0, 102, 255, 0.4);
+  --color-blue-glow: rgba(0, 71, 171, 0.5);
 
   --color-light-bg: #FFFFFF;
   --color-light-surface: #F8FAFC;
@@ -1843,9 +1843,9 @@ textarea.form-control {
   left: 0;
   height: 3px;
   width: 0%;
-  background: linear-gradient(90deg, #0066ff 0%, #00d2ff 50%, #38ef7d 100%);
+  background: linear-gradient(90deg, #002660 0%, #0047ab 60%, #0077ff 100%);
   z-index: 9999;
-  box-shadow: 0 0 12px rgba(0, 102, 255, 0.8);
+  box-shadow: 0 0 12px rgba(0, 71, 171, 0.8);
   transition: width 0.1s linear;
 }
 

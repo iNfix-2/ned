@@ -1,11 +1,13 @@
 /* ==========================================================================
    NetHawk Solutions - Trionn-Style 3D Storytelling & Animation Engine
-   Interactive 3D Perspective Stage, Magnetic Tactical Cursor & Parallax Reveals
+   Interactive 3D Perspective Stage, Universal Card Tilt, Magnetic Cursor & Kinetic Motion
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
     initTacticalCursor();
     init3DStoryStage();
+    initUniversalCard3DTilt();
+    initAmbientLightBlob();
     initKineticScrollReveals();
 });
 
@@ -62,7 +64,7 @@ function initTacticalCursor() {
     );
 
     interactiveElements.forEach((el) => {
-        el.addEventListener('mouseenter', (e) => {
+        el.addEventListener('mouseenter', () => {
             ring.classList.add('active');
 
             const cursorText = el.getAttribute('data-cursor');
@@ -82,7 +84,7 @@ function initTacticalCursor() {
         });
 
         // Magnetic displacement effect for buttons
-        if (el.classList.contains('btn-primary-blue') || el.classList.contains('btn-glass-outline') || el.classList.contains('showcase-pill-btn')) {
+        if (el.classList.contains('btn-primary-blue') || el.classList.contains('btn-glass-outline') || el.classList.contains('showcase-pill-btn') || el.classList.contains('btn-header-cta')) {
             el.addEventListener('mousemove', (e) => {
                 const rect = el.getBoundingClientRect();
                 const relX = e.clientX - rect.left - rect.width / 2;
@@ -155,11 +157,78 @@ function init3DStoryStage() {
 }
 
 /* ==========================================================================
-   3. Kinetic Scroll Reveals & Image Parallax Scaling
+   3. Universal Card 3D Tilt & Specular Glow Physics across Entire Site
+   ========================================================================== */
+function initUniversalCard3DTilt() {
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return;
+
+    const cards = document.querySelectorAll(
+        '.capability-card, .value-card, .solution-finder-card, .industry-icon-card'
+    );
+
+    cards.forEach((card) => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -6;
+            const rotateY = ((x - centerX) / centerX) * 6;
+
+            card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+            
+            const glareX = (x / rect.width) * 100;
+            const glareY = (y / rect.height) * 100;
+            card.style.backgroundImage = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(0, 102, 255, 0.15) 0%, transparent 70%)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+            card.style.backgroundImage = '';
+        });
+    });
+}
+
+/* ==========================================================================
+   4. Ambient Tactical Light Blob Trailing Cursor
+   ========================================================================== */
+function initAmbientLightBlob() {
+    let blob = document.querySelector('.ambient-tactical-blob');
+    if (!blob) {
+        blob = document.createElement('div');
+        blob.className = 'ambient-tactical-blob';
+        document.body.appendChild(blob);
+    }
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let blobX = mouseX;
+    let blobY = mouseY;
+
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateBlob() {
+        blobX += (mouseX - blobX) * 0.05;
+        blobY += (mouseY - blobY) * 0.05;
+
+        blob.style.transform = `translate3d(${blobX - 250}px, ${blobY - 250}px, 0)`;
+        requestAnimationFrame(animateBlob);
+    }
+    animateBlob();
+}
+
+/* ==========================================================================
+   5. Kinetic Scroll Reveals & Image Parallax Scaling
    ========================================================================== */
 function initKineticScrollReveals() {
     const revealElements = document.querySelectorAll(
-        '.section-title-main, .section-subtitle-text, .capability-card, .solution-finder-card, .value-card, .industry-icon-card'
+        '.section-title-main, .section-subtitle-text, .capability-card, .solution-finder-card, .value-card, .industry-icon-card, .about-content-left, .why-choose-glass-card'
     );
 
     const observer = new IntersectionObserver((entries) => {

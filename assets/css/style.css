@@ -2517,10 +2517,31 @@ section,
   transform: translateY(0);
 }
 
+/* Ambient Tactical Light Blob */
+.ambient-tactical-blob {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.12) 0%, rgba(0, 204, 255, 0.04) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  transform: translate3d(-250px, -250px, 0);
+  filter: blur(40px);
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+
 @media (max-width: 992px) {
   .showcase-3d-card {
     grid-template-columns: 1fr;
     padding: 24px;
   }
+  .ambient-tactical-blob {
+    display: none;
+  }
 }
+
 

@@ -1491,7 +1491,7 @@ textarea.form-control {
 }
 
 .footer-giant-submeta span::before {
-  content: '//';
+  content: '•';
   color: var(--color-blue-primary);
   font-weight: bold;
 }
@@ -2096,12 +2096,7 @@ textarea.form-control {
 }
 
 .showcase-card-num {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  color: var(--color-blue-primary);
-  letter-spacing: 3px;
-  margin-bottom: 12px;
-  font-weight: 700;
+  display: none !important;
 }
 
 .showcase-card-title {

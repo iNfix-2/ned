@@ -2202,8 +2202,8 @@ textarea.form-control {
 .showcase-3d-stage {
   position: relative;
   width: 100%;
-  max-width: 1100px;
-  height: 520px;
+  max-width: 1200px;
+  min-height: 520px;
   margin: 40px auto 0 auto;
   perspective: 1400px;
   z-index: 2;
@@ -2215,21 +2215,22 @@ textarea.form-control {
 .showcase-3d-card {
   position: absolute;
   width: 100%;
-  max-width: 960px;
+  max-width: 1140px;
   height: 100%;
-  background: rgba(0, 0, 0, 0.95);
-  border: 1px solid rgba(0, 102, 255, 0.35);
-  border-radius: var(--radius-lg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85), 0 0 45px rgba(0, 102, 255, 0.18);
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  overflow: hidden;
+  gap: 48px;
+  overflow: visible;
   opacity: 0;
-  transform: rotateY(45deg) translateZ(-200px) scale(0.85);
+  transform: rotateY(15deg) translateZ(-80px) scale(0.92);
   pointer-events: none;
-  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s ease, border-color 0.4s ease;
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s ease;
 }
 
 .showcase-3d-card.active {
@@ -2240,10 +2241,11 @@ textarea.form-control {
 }
 
 .showcase-card-content {
-  padding: 44px 48px;
+  padding: 20px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
   z-index: 2;
 }
 
@@ -2252,39 +2254,110 @@ textarea.form-control {
 }
 
 .showcase-card-title {
-  font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  font-weight: 800;
-  color: var(--color-text-white);
-  line-height: 1.15;
-  margin-bottom: 16px;
-  text-transform: uppercase;
+  font-family: var(--font-heading), 'Inter', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.12;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+  text-transform: none;
 }
 
 .showcase-card-desc {
-  font-size: 0.92rem;
-  color: var(--color-text-dim);
-  line-height: 1.6;
-  margin-bottom: 28px;
+  font-size: 1.02rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+  margin-bottom: 32px;
+  max-width: 520px;
 }
 
 .showcase-card-media {
   position: relative;
+  width: 100%;
+  height: 480px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
   overflow: hidden;
-  border-left: 1px solid rgba(0, 102, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 95%);
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 95%);
 }
 
 .showcase-card-media img,
 .showcase-card-media video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.8s ease;
+  object-fit: contain;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: contrast(1.1) brightness(1.05);
 }
 
 .showcase-3d-card:hover .showcase-card-media img,
 .showcase-3d-card:hover .showcase-card-media video {
-  transform: scale(1.08);
+  transform: scale(1.06);
+}
+
+/* Tactical Reticle Button (Shield AI Style) */
+.btn-tactical-reticle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  background: transparent;
+  color: #ffffff;
+  font-family: var(--font-heading), 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  transition: all 0.3s ease;
+  user-select: none;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.btn-tactical-reticle::before,
+.btn-tactical-reticle::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-color: #0088FF;
+  border-style: solid;
+  transition: all 0.3s ease;
+}
+
+.btn-tactical-reticle::before {
+  top: -2px;
+  left: -2px;
+  border-width: 2px 0 0 2px;
+}
+
+.btn-tactical-reticle::after {
+  bottom: -2px;
+  right: -2px;
+  border-width: 0 2px 2px 0;
+}
+
+.btn-tactical-reticle:hover {
+  color: #ffffff;
+  background: rgba(0, 102, 255, 0.15);
+  border-color: #0088FF;
+  box-shadow: 0 0 25px rgba(0, 102, 255, 0.45);
+}
+
+.btn-tactical-reticle:hover::before,
+.btn-tactical-reticle:hover::after {
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border-color: #0088FF;
 }
 
 .showcase-controls-bar {
@@ -2529,18 +2602,15 @@ section,
 }
 
 .showcase-3d-card {
-  display: none;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 32px;
-  background: rgba(10, 15, 25, 0.85);
-  border: 1px solid rgba(0, 102, 255, 0.25);
-  border-radius: 12px;
-  padding: 40px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 102, 255, 0.1);
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
   transform-style: preserve-3d;
-  transition: transform 0.15s ease-out, border-color 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  transition: transform 0.15s ease-out;
+  overflow: visible;
 }
 
 .showcase-3d-card.active {
@@ -2564,39 +2634,43 @@ section,
   flex-direction: column;
   justify-content: center;
   z-index: 2;
+  text-align: left;
 }
 
 .showcase-card-title {
   font-family: var(--font-heading, 'Inter', sans-serif);
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 500;
   color: #ffffff;
-  margin-bottom: 14px;
-  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
 }
 
 .showcase-card-desc {
-  font-size: 0.95rem;
+  font-size: 1.02rem;
   line-height: 1.65;
-  color: var(--color-slate-gray, #8a99ad);
-  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 28px;
 }
 
 .showcase-card-media {
   position: relative;
-  border-radius: 8px;
+  border-radius: 0 !important;
   overflow: hidden;
-  border: 1px solid rgba(0, 102, 255, 0.3);
-  background: #000000;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 95%);
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 95%);
 }
 
 .showcase-card-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 

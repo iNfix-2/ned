@@ -1397,27 +1397,27 @@ textarea.form-control {
 /* ==========================================================================
    Giant Brand Banner Section (Shield AI Style)
    ========================================================================== */
+/* ==========================================================================
+   Giant Brand Banner Section (Shield AI Style)
+   ========================================================================== */
 .footer-giant-banner {
   background-color: #000000;
-  border-top: 1px solid var(--color-dark-border);
-  padding: 70px 0 50px 0;
+  border-top: none !important;
+  border-bottom: none !important;
+  padding: 60px 0 40px 0;
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 .footer-giant-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-blue-primary), transparent);
+  display: none !important;
 }
 
 .footer-giant-wrapper {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 .footer-giant-text-wrap {
@@ -1425,25 +1425,29 @@ textarea.form-control {
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding: 0;
 }
 
 .footer-giant-text {
   font-family: var(--font-heading), 'Inter', sans-serif;
-  font-size: clamp(3.2rem, 13.5vw, 14.5rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  font-size: clamp(5.5rem, 23.5vw, 32rem);
+  font-weight: 900;
+  letter-spacing: -0.01em;
   line-height: 0.85;
   text-transform: uppercase;
-  background: linear-gradient(180deg, rgba(241, 245, 249, 0.22) 0%, rgba(148, 163, 184, 0.04) 100%);
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(241, 245, 249, 0.45) 0%, rgba(148, 163, 184, 0.08) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   user-select: none;
   white-space: nowrap;
   transition: var(--transition);
+  display: block;
 }
 
 .footer-giant-banner:hover .footer-giant-text {
-  background: linear-gradient(180deg, rgba(0, 102, 255, 0.4) 0%, rgba(241, 245, 249, 0.08) 100%);
+  background: linear-gradient(180deg, rgba(0, 102, 255, 0.55) 0%, rgba(241, 245, 249, 0.12) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1470,7 +1474,7 @@ textarea.form-control {
   align-items: center;
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: none !important;
   font-family: var(--font-heading);
   font-size: 0.85rem;
   letter-spacing: 2px;
@@ -1499,7 +1503,7 @@ textarea.form-control {
   background-color: #000000;
   color: var(--color-text-dim);
   padding: 70px 0 30px 0;
-  border-top: 1px solid var(--color-dark-border);
+  border-top: none !important;
 }
 
 .footer-top-grid {
@@ -1570,7 +1574,7 @@ textarea.form-control {
 }
 
 .footer-bottom-bar {
-  border-top: 1px solid var(--color-dark-border);
+  border-top: none !important;
   padding-top: 24px;
   text-align: center;
   font-size: 0.8rem;
@@ -1749,6 +1753,14 @@ textarea.form-control {
     grid-column: 1 / -1;
     text-align: center;
     margin-bottom: 20px;
+  }
+
+  /* Hide Footer Logo on Mobile View Across All Pages */
+  .site-footer .brand-logo-wrap,
+  .site-footer .brand-logo-img,
+  .footer-brand-col .brand-logo-wrap,
+  .footer-brand-col .brand-logo-img {
+    display: none !important;
   }
 
   .footer-social-icons {
@@ -2196,5 +2208,80 @@ textarea.form-control {
     padding: 28px 24px;
   }
 }
+
+/* ==========================================================================
+   Section Line Elimination & Full-Width Giant Typography Overrides
+   ========================================================================== */
+
+/* Eliminate all thin blue/dark border lines between sections across the site */
+section,
+.capabilities-section,
+.about-nethawk-section,
+.statistics-section,
+.technology-section,
+.solutions-section,
+.industries-serve-section,
+.why-choose-section,
+.certifications-section,
+.clients-section,
+.insights-section,
+.testimonials-section,
+.train-section,
+.contact-section,
+.values-section,
+.mission-vision-section,
+.services-division-detail,
+.footer-giant-banner,
+.site-footer,
+.footer-bottom-bar {
+  border-bottom: none !important;
+  border-top: none !important;
+}
+
+.footer-giant-banner::before,
+.site-header::after {
+  display: none !important;
+}
+
+/* Full Width Giant NETHAWK Text Banner Scaling */
+.footer-giant-banner {
+  width: 100% !important;
+  padding: 50px 0 !important;
+  background-color: #000000 !important;
+}
+
+.footer-giant-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.footer-giant-text-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.footer-giant-text {
+  font-family: var(--font-heading), 'Inter', sans-serif !important;
+  font-size: clamp(6rem, 24vw, 34rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 0.85 !important;
+  width: 100% !important;
+  text-align: center !important;
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .footer-giant-text {
+    font-size: clamp(3.8rem, 22.5vw, 10rem) !important;
+    letter-spacing: -0.02em !important;
+  }
+}
+
 
 

@@ -189,45 +189,63 @@ function initGSAPPinned3DShowcase() {
 }
 
 /* ==========================================================================
-   4. Split-Text Line & Word Reveal Animations
+   4. Split-Text Character 3D Perspective Roll-Up Kinetic Reveals
    ========================================================================== */
 function initSplitTextKineticReveals() {
     if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
-    const headings = document.querySelectorAll('.section-title-main, .hero-headline');
+    const headings = document.querySelectorAll('.section-title-main, .hero-headline, .showcase-card-title');
 
     headings.forEach((heading) => {
         if (heading.getAttribute('data-split-init')) return;
         heading.setAttribute('data-split-init', 'true');
 
-        const text = heading.innerText;
+        const originalText = heading.innerText.trim();
+        if (!originalText) return;
+
         heading.innerHTML = '';
+        const words = originalText.split(/\s+/);
 
-        const lines = text.split('\n');
-        lines.forEach((lineText) => {
-            const lineWrap = document.createElement('span');
-            lineWrap.className = 'trionn-line-mask';
+        words.forEach((wordText, wIdx) => {
+            const wordMask = document.createElement('span');
+            wordMask.className = 'trionn-word-mask';
 
-            const lineContent = document.createElement('span');
-            lineContent.className = 'trionn-line-content';
-            lineContent.innerText = lineText;
+            const wordWrap = document.createElement('span');
+            wordWrap.className = 'trionn-word';
 
-            lineWrap.appendChild(lineContent);
-            heading.appendChild(lineWrap);
+            [...wordText].forEach((char) => {
+                const charSpan = document.createElement('span');
+                charSpan.className = 'trionn-kinetic-char';
+                charSpan.innerHTML = char;
+                wordWrap.appendChild(charSpan);
+            });
+
+            wordMask.appendChild(wordWrap);
+            heading.appendChild(wordMask);
+
+            if (wIdx < words.length - 1) {
+                const space = document.createTextNode(' ');
+                heading.appendChild(space);
+            }
         });
 
         gsap.fromTo(
-            heading.querySelectorAll('.trionn-line-content'),
-            { y: '110%', opacity: 0 },
+            heading.querySelectorAll('.trionn-kinetic-char'),
+            {
+                y: '130%',
+                rotateX: -80,
+                opacity: 0
+            },
             {
                 y: '0%',
+                rotateX: 0,
                 opacity: 1,
                 duration: 1.1,
-                ease: 'power3.out',
-                stagger: 0.15,
+                ease: 'power4.out',
+                stagger: 0.025,
                 scrollTrigger: {
                     trigger: heading,
-                    start: 'top 85%',
+                    start: 'top 88%',
                     toggleActions: 'play none none none'
                 }
             }

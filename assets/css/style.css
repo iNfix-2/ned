@@ -2682,16 +2682,26 @@ button:hover .trionn-layer-clone .trionn-char,
   opacity: 1;
 }
 
-/* Split Line Masks for Headlines */
-.trionn-line-mask {
-  display: block;
+/* 3D Character Perspective Word Masks */
+.trionn-word-mask {
+  display: inline-block;
   overflow: hidden;
-  position: relative;
+  vertical-align: top;
+  perspective: 800px;
+  line-height: 1.1;
+  padding-bottom: 0.05em;
 }
 
-.trionn-line-content {
-  display: block;
+.trionn-word {
+  display: inline-flex;
+  transform-style: preserve-3d;
+}
+
+.trionn-kinetic-char {
+  display: inline-block;
   will-change: transform, opacity;
+  transform-origin: 50% 100%;
+  backface-visibility: hidden;
 }
 
 @media (max-width: 992px) {
@@ -2703,6 +2713,7 @@ button:hover .trionn-layer-clone .trionn-char,
     display: none;
   }
 }
+
 
 
 

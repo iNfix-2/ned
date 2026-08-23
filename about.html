@@ -6,6 +6,10 @@
     <title>About Us | NETHAWK SOLUTIONS</title>
     <meta name="description" content="Learn about NETHAWK SOLUTIONS - Delivering integrated digital, engineering, automation, security, and defence technology capabilities.">
     
+    <!-- FontAwesome 6 & RemixIcon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -27,38 +31,37 @@
 
             <button class="mobile-burger-icon" id="burgerBtn" aria-label="Toggle Navigation">&#9776;</button>
         </div>
-
-        <div class="mobile-nav-drawer" id="mobileDrawer">
-            <ul class="mobile-nav-list">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html" class="active">ABOUT US</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="contact.html">CONTACT US</a></li>
-            </ul>
-        </div>
     </header>
 
-    <!-- Hero Banner -->
-    <section class="hero-section" style="min-height: 50vh;">
-        <video class="hero-bg-video" autoplay loop muted playsinline poster="assets/images/NTI-55.jpg">
-            <source src="assets/videos/hero_background.mp4" type="video/mp4">
-        </video>
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html" class="active">ABOUT US</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+        <a href="contact.html" class="btn-primary-blue" style="margin-top: 10px;">GET IN TOUCH</a>
+    </div>
+
+    <!-- Page Hero Section -->
+    <section class="hero-section" style="min-height: 48vh;">
         <div class="hero-overlay-mask"></div>
         <div class="hero-grid-pattern"></div>
         <div class="container">
-            <div class="hero-content-box" style="padding: 40px 0;">
+            <div class="hero-content-box" style="padding: 50px 0;">
                 <h1 class="hero-headline">ABOUT NETHAWK SOLUTIONS</h1>
-                <p class="hero-subheadline">Engineering Solutions for a Connected World.</p>
+                <p class="hero-subheadline">Integrated Digital, Engineering, Automation, Security, and Defence Technology Capabilities.</p>
             </div>
         </div>
     </section>
 
-    <!-- Company Overview -->
+    <!-- About Content Grid -->
     <section class="about-nethawk-section">
         <div class="container">
             <div class="about-grid-wrap">
                 <div class="about-content-left">
-                    <h2>TECHNOLOGY. INTELLIGENCE. CAPABILITY.</h2>
+                    <h2 style="font-size: 2.2rem;">MULTIDISCIPLINARY TECHNOLOGY & CAPABILITY</h2>
                     <p>
                         NETHAWK SOLUTIONS is a technology and solutions company delivering integrated digital, engineering, automation, security, and defence technology capabilities. We combine software engineering, intelligent systems, unmanned technologies, data, automation, and technical training to help organisations improve operational efficiency, security, situational awareness, and decision-making.
                     </p>
@@ -70,23 +73,27 @@
                     <img src="assets/images/NSL DRONE CAPTURE-2 (1).jpg" alt="NETHAWK SOLUTIONS Multidisciplinary Ecosystem">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Mission & Vision Cards -->
-            <div class="mission-vision-grid">
-                <div class="mission-card">
-                    <span class="card-tag-badge">OUR MISSION</span>
-                    <h3>Intelligence-Driven Operational Effectiveness</h3>
-                    <p>
-                        To deliver innovative, reliable, and intelligence-driven technology solutions that improve operational effectiveness, protect critical assets, and enable organisations to work smarter and respond faster.
-                    </p>
+    <!-- Mission & Vision Cards -->
+    <section class="capabilities-section">
+        <div class="container">
+            <div class="about-grid-wrap">
+                <div class="capability-card" style="min-height: 220px;">
+                    <div>
+                        <span class="card-tag-badge">OUR MISSION</span>
+                        <h3 class="capability-title" style="margin-top: 10px;">ENGINEERING CAPABILITY</h3>
+                        <p class="capability-desc">To develop and integrate practical, high-value technology solutions across software, automation, intelligence, surveillance, and defence systems that empower organisations and protect operational assets.</p>
+                    </div>
                 </div>
 
-                <div class="vision-card">
-                    <span class="card-tag-badge">OUR VISION</span>
-                    <h3>Global Recognition & Indigenous Advancement</h3>
-                    <p>
-                        To become a globally recognised technology solutions company, advancing Africa's digital and engineering capabilities through innovation, excellence, and practical technology.
-                    </p>
+                <div class="capability-card" style="min-height: 220px;">
+                    <div>
+                        <span class="card-tag-badge">OUR VISION</span>
+                        <h3 class="capability-title" style="margin-top: 10px;">INDIGENOUS EXCELLENCE</h3>
+                        <p class="capability-desc">To build a leading multidisciplinary technology and solutions company recognized for technical depth, systems integration, indigenous capability, and mission-focused innovation.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -103,7 +110,7 @@
             <div class="values-grid">
                 <div class="value-card">
                     <div class="value-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <i class="fa-solid fa-award"></i>
                     </div>
                     <div class="value-title">Excellence</div>
                     <div class="value-desc">We pursue high standards in technology, engineering, service, and delivery.</div>
@@ -111,7 +118,7 @@
 
                 <div class="value-card">
                     <div class="value-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        <i class="fa-solid fa-lightbulb"></i>
                     </div>
                     <div class="value-title">Innovation</div>
                     <div class="value-desc">We continuously explore better ways to solve complex problems.</div>
@@ -119,7 +126,7 @@
 
                 <div class="value-card">
                     <div class="value-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+                        <i class="fa-solid fa-crosshairs"></i>
                     </div>
                     <div class="value-title">Precision</div>
                     <div class="value-desc">We value disciplined execution and attention to detail.</div>
@@ -127,7 +134,7 @@
 
                 <div class="value-card">
                     <div class="value-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <i class="fa-solid fa-shield-halved"></i>
                     </div>
                     <div class="value-title">Integrity</div>
                     <div class="value-desc">We operate with professionalism, accountability, and responsibility.</div>
@@ -135,7 +142,7 @@
 
                 <div class="value-card">
                     <div class="value-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        <i class="fa-solid fa-lock"></i>
                     </div>
                     <div class="value-title">Security</div>
                     <div class="value-desc">We protect people, systems, information, infrastructure, and capabilities.</div>

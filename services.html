@@ -6,6 +6,10 @@
     <title>Services & Divisions | NETHAWK SOLUTIONS</title>
     <meta name="description" content="Explore NETHAWK SOLUTIONS service divisions: Enterprise & Digital, Defence Tech, AI & Intelligent Systems, Surveillance, Engineering Integration, R&D, and NATI Academy.">
     
+    <!-- FontAwesome 6 & RemixIcon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -27,36 +31,35 @@
 
             <button class="mobile-burger-icon" id="burgerBtn" aria-label="Toggle Navigation">&#9776;</button>
         </div>
-
-        <div class="mobile-nav-drawer" id="mobileDrawer">
-            <ul class="mobile-nav-list">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="services.html" class="active">SERVICES</a></li>
-                <li><a href="contact.html">CONTACT US</a></li>
-            </ul>
-        </div>
     </header>
 
-    <!-- Hero Banner -->
-    <section class="hero-section" style="min-height: 50vh;">
-        <video class="hero-bg-video" autoplay loop muted playsinline poster="assets/images/NSL DRONE CAPTURE-2 (1).jpg">
-            <source src="assets/videos/hero_background.mp4" type="video/mp4">
-        </video>
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="services.html" class="active">SERVICES</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+        <a href="contact.html" class="btn-primary-blue" style="margin-top: 10px;">GET IN TOUCH</a>
+    </div>
+
+    <!-- Page Hero Section -->
+    <section class="hero-section" style="min-height: 48vh;">
         <div class="hero-overlay-mask"></div>
         <div class="hero-grid-pattern"></div>
         <div class="container">
-            <div class="hero-content-box" style="padding: 40px 0;">
-                <h1 class="hero-headline">OUR SERVICES</h1>
-                <p class="hero-subheadline">Integrated Solutions. One Technology Partner.</p>
+            <div class="hero-content-box" style="padding: 50px 0;">
+                <h1 class="hero-headline">SERVICES & DIVISIONS</h1>
+                <p class="hero-subheadline">Multidisciplinary Technology Solutions Built for Connected Operational Excellence.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Division Section -->
-    <section class="solutions-section">
+    <!-- Services Overview Section -->
+    <section class="capabilities-section">
         <div class="container">
-            <div class="text-center" style="margin-bottom: 40px;">
+            <div class="text-center">
                 <h2 class="section-title-main light-text">CONNECTED TECHNOLOGY PORTFOLIO</h2>
                 <p class="section-subtitle-text">Each service can be delivered independently or integrated into a broader operational solution.</p>
             </div>
@@ -67,9 +70,7 @@
                 <div class="solution-finder-card" id="enterprise">
                     <div class="solution-card-left">
                         <div class="solution-card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-                            </svg>
+                            <i class="fa-solid fa-laptop-code"></i>
                         </div>
                         <div class="solution-card-info">
                             <h3>ENTERPRISE & DIGITAL SOLUTIONS</h3>
@@ -95,9 +96,7 @@
                 <div class="solution-finder-card" id="defence">
                     <div class="solution-card-left">
                         <div class="solution-card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                            </svg>
+                            <i class="fa-solid fa-shield-cat"></i>
                         </div>
                         <div class="solution-card-info">
                             <h3>NETHAWK DEFENCE TECH</h3>
@@ -125,9 +124,7 @@
                 <div class="solution-finder-card" id="ai">
                     <div class="solution-card-left">
                         <div class="solution-card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/>
-                            </svg>
+                            <i class="fa-solid fa-brain"></i>
                         </div>
                         <div class="solution-card-info">
                             <h3>AI, DATA & INTELLIGENT SYSTEMS</h3>
@@ -153,9 +150,7 @@
                 <div class="solution-finder-card" id="surveillance">
                     <div class="solution-card-left">
                         <div class="solution-card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
+                            <i class="fa-solid fa-video"></i>
                         </div>
                         <div class="solution-card-info">
                             <h3>SURVEILLANCE & SECURITY TECHNOLOGY</h3>
@@ -181,9 +176,7 @@
                 <div class="solution-finder-card" id="engineering">
                     <div class="solution-card-left">
                         <div class="solution-card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="2" width="20" height="20" rx="4"/><path d="M6 12h12M12 6v12"/>
-                            </svg>
+                            <i class="fa-solid fa-gears"></i>
                         </div>
                         <div class="solution-card-info">
                             <h3>ENGINEERING & SYSTEMS INTEGRATION</h3>
@@ -209,9 +202,7 @@
                 <div class="solution-finder-card" id="research">
                     <div class="solution-card-left">
                         <div class="solution-card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                            </svg>
+                            <i class="fa-solid fa-flask-vial"></i>
                         </div>
                         <div class="solution-card-info">
                             <h3>RESEARCH & INNOVATION</h3>
@@ -237,9 +228,7 @@
                 <div class="solution-finder-card" id="academy">
                     <div class="solution-card-left">
                         <div class="solution-card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polygon points="12 2 19 21 12 17 5 21 12 2"/>
-                            </svg>
+                            <i class="fa-solid fa-graduation-cap"></i>
                         </div>
                         <div class="solution-card-info">
                             <h3>ACADEMY & PROFESSIONAL TRAINING (NATI)</h3>

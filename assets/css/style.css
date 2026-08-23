@@ -424,19 +424,23 @@ img, video {
 .capability-icon-box {
   width: 52px;
   height: 52px;
-  background: rgba(0, 102, 255, 0.1);
-  border: 1px solid rgba(0, 102, 255, 0.3);
-  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.22) 0%, rgba(0, 38, 96, 0.12) 100%);
+  border: 1.5px solid rgba(0, 102, 255, 0.4);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-blue-primary);
+  color: #0088FF;
+  font-size: 1.4rem;
   margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 71, 171, 0.2);
+  transition: var(--transition);
 }
 
-.capability-icon-box svg {
-  width: 26px;
-  height: 26px;
+.capability-icon-box svg,
+.capability-icon-box i {
+  font-size: 1.4rem;
+  color: #0088FF;
 }
 
 .capability-title {
@@ -1350,16 +1354,27 @@ textarea.form-control {
 }
 
 .value-card-icon {
-  width: 44px;
-  height: 44px;
-  background: rgba(0, 102, 255, 0.12);
-  border: 1px solid rgba(0, 102, 255, 0.3);
-  color: var(--color-blue-primary);
-  border-radius: var(--radius-sm);
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.22) 0%, rgba(0, 38, 96, 0.12) 100%);
+  border: 1.5px solid rgba(0, 102, 255, 0.4);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
+  color: #0088FF;
+  font-size: 1.35rem;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 15px rgba(0, 71, 171, 0.2);
+  transition: var(--transition);
+}
+
+.value-card:hover .value-card-icon {
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.45) 0%, rgba(0, 54, 150, 0.3) 100%);
+  border-color: #0088FF;
+  color: #FFFFFF;
+  box-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+  transform: scale(1.08);
 }
 
 .value-title {

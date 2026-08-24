@@ -272,6 +272,15 @@ img, video {
   background-color: var(--color-dark-bg);
 }
 
+.hero-video-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
 .hero-bg-video {
   position: absolute;
   top: 50%;
@@ -1822,31 +1831,53 @@ textarea.form-control {
     transform: translateY(-50%);
   }
 
+  /* Mobile Hero Section (Uncropped 16:9 Cinematic Video Display) */
   .hero-section {
-    min-height: 90vh;
-    min-height: 90dvh;
+    min-height: auto !important;
+    height: auto !important;
+    padding: 30px 0 45px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    max-width: 100vw;
     overflow: hidden;
+  }
+
+  .hero-video-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 102, 255, 0.4);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.85), 0 0 25px rgba(0, 102, 255, 0.2);
+    overflow: hidden;
+    margin-bottom: 24px;
+    background-color: #000000;
   }
 
   .hero-bg-video {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100vw;
-    min-width: 100vw;
-    max-width: 100vw;
+    width: 100%;
     height: 100%;
+    min-width: 100%;
     min-height: 100%;
     transform: translate(-50%, -50%);
     object-fit: cover;
     object-position: center center;
   }
 
+  .hero-overlay-mask {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.45) 100%);
+  }
+
   .hero-content-box {
-    padding: 50px 0;
+    padding: 0;
     text-align: center;
+    width: 100%;
   }
 
   .hero-subheadline {
@@ -1967,25 +1998,15 @@ textarea.form-control {
   }
 
   .hero-section {
-    min-height: 100vh;
-    min-height: 100dvh;
-    width: 100%;
-    max-width: 100vw;
-    overflow: hidden;
+    min-height: auto !important;
+    height: auto !important;
+    padding: 20px 0 36px 0;
   }
 
-  .hero-bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    min-width: 100vw;
-    max-width: 100vw;
-    height: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    object-position: center center;
+  .hero-video-wrap {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    aspect-ratio: 16 / 9;
   }
 
   .brand-logo-img {
